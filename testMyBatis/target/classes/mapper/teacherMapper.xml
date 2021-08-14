@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TeacherMapper">
+
+
+    <select id="selectTeacher"  resultType="teacher">
+        select * from mybatis.teacher
+    </select>
+
+<!--    <select id="selectTeacherStudent" resultMap="selectTeacherStudent">-->
+<!--        select s.id, s.name sname, t.name tname, s.tid as tid from student as s left join teacher as t-->
+<!--        on s.tid = t.id where t.id=#{tid}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 集合 一对多 collection &ndash;&gt;-->
+<!--    <resultMap id="selectTeacherStudent" type="teacher">-->
+<!--        <result property="id" column="tid"/>-->
+<!--        <result property="name" column="tname"/>-->
+<!--        <collection property="students" javaType="ArrayList" ofType="student">-->
+<!--            <result property="id" column="id"/>-->
+<!--            <result property="name" column="sname"/>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+
+
+    <!-- 子查询-->
+    <select id="selectTeacherStudent" resultMap="selectTeacherStudent">
+        select * from teacher where id=#{tid}
+    </select>
+
+    <resultMap id="selectTeacherStudent" type="teacher">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <collection property="students" javaType="ArrayList" ofType="student" column="id" select="selectStudent"/>
+    </resultMap>
+
+    <select id="selectStudent" resultType="student">
+        select * from student where tid=#{id}
+    </select>
+
+</mapper>
