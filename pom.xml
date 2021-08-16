@@ -9,11 +9,12 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>test_tian_one</module>
-      <module>testMyBatis</module>
-      <module>testSpring</module>
+    <module>testMyBatis</module>
+    <module>testSpring</module>
     <module>testMybatis_Spring</module>
-      <module>testSpringMVC</module>
+    <module>testSpringMVC</module>
   </modules>
+
   <packaging>pom</packaging>
 
   <name>testSpringBoot Maven Webapp</name>

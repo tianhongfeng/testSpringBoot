@@ -14,7 +14,7 @@
     <!-- 给javabean起别名 -->
     <typeAliases>
         <typeAlias alias="user" type="pojo.User"/>
-<!--        <typeAlias alias="teacher" type="pojo.Teacher"/>-->
+        <typeAlias alias="teacher" type="pojo.Teacher"/>
 <!--        <typeAlias alias="student" type="pojo.Student"/>-->
     </typeAliases>
 

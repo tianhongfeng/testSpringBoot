@@ -12,7 +12,7 @@ public class testUserMapper {
     @Test
     public void test(){
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        UserMapper userMapper = (UserMapper) context.getBean("userMapper");
+        UserMapper userMapper = (UserMapper) context.getBean("userMapper2");
         List<User> users = userMapper.selectUser();
         for (User user:users){
             System.out.println(user);

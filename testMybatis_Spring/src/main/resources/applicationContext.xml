@@ -17,4 +17,8 @@
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
+    <bean id="teacherMapper" class="dao.TeacherMapperImpl">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
 </beans>
