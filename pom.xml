@@ -12,6 +12,7 @@
       <module>testMyBatis</module>
       <module>testSpring</module>
     <module>testMybatis_Spring</module>
+      <module>testSpringMVC</module>
   </modules>
   <packaging>pom</packaging>
 
