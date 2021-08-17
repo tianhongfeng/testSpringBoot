@@ -47,6 +47,7 @@
         <url-pattern>/testsession</url-pattern>
     </servlet-mapping>
 
+    <!-- 设置过滤器 -->
     <filter>
         <filter-name>CharacterencodeFilter</filter-name>
         <filter-class>filter.CharacterencodeFilter</filter-class>

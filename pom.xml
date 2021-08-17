@@ -13,6 +13,7 @@
     <module>testSpring</module>
     <module>testMybatis_Spring</module>
     <module>testSpringMVC</module>
+      <module>SSMBuild</module>
   </modules>
 
   <packaging>pom</packaging>
